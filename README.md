@@ -1,20 +1,16 @@
-# Near-separable-NMF-on-time-resolved-spectra
+# Near-separable-NMF-on-time-resolved-spectra by Successive Nonnegative Projection Algorithm
 
 An python implementaion of  
 
 **"Successive Nonnegative Projection Algorithm for Robust Nonnegative Blind Source Separation"  
     by Gillis. (2014), doi : 10.1137/130946782  
-    code : https://sites.google.com/site/nicolasgillis/code  
-
-and
+    matlab code : https://sites.google.com/site/nicolasgillis/code  
 
 **"Using Separable Nonnegative Matrix Factorization Techniques for the Analysis of Time-Resolved Raman Spectra"  
 by Luce et al. (2016), doi : 10.1177/0003702816662600**
 
 
 # Introduction
-
-
 ## (1) Time-resolved sepctrum
 For fundamental knowledge of time-resolved spectrum, refer :  
 https://en.wikipedia.org/wiki/Time-resolved_spectroscopy
@@ -44,56 +40,23 @@ Hence, the approximation of separable NMF highly depends on the overlapping betw
 **i.e. The less hyperspectra overlap, the better approximation you get.**
 
 
-## (3) Algorithm
-(a) A time-resolved sepctrum M is factorized on near-separable assumption to **get a nice initial guess of W and H**,  
-by using the **successive nonnegative projection algorithm**
-
- * "Successive Nonnegative Projection Algorithm for Robust Nonnegative Blind Source Separation"  
-    by Gillis. (2014), doi : 10.1137/130946782  
-    code : https://sites.google.com/site/nicolasgillis/code  
-
-(b) then perform a normal nmf (without near-separable assupmtion) to **improve the reconstruction accuracy**.  
-In this work, a **projected gradient methods** is used.
-
- * "Projected gradient methods for non-negative matrix factorization"  
-    by C.-J. Lin (2007), doi : 10.1162/neco.2007.19.10.2756  
-    code : https://www.csie.ntu.edu.tw/~cjlin/nmf/index.html  
-
-**The above nmf codes are directly used without modification, you can also download them from their authors' website.**
-
-# Program
-    "trs_fm.m" perform the separable nonnegative matrix factorization method.
-
-    "nmf/*" is the code of nmf by using projected gradient methods.
-
-    "snpa/*" is the code of nmf by using successive nonnegative projection algorithm.
-
-    Run "nmf_demo.m" to generate time-resolved spectra, and perform the "trs_fm".
+# Run program
+    (1) Install libraries : numpy, scipy, matplotlib
+    
+    (2) Run time_resolved_spectra_NMF.py 
 
 # Results
 
 An artificial time-resolved spectra is given M = W * H:  
 where  
-## (1) The original time-resolved spectra, kinetics and hyperspectra
-
 ### M (time-resolved spectra)  
-  
-![image](https://github.com/j6309355065/Near-seperable-NMF-on-time-resolved-spectra/blob/master/figure/trspec.jpg)
-  
-### W (kinetics)  
-  
-![image](https://github.com/j6309355065/Near-seperable-NMF-on-time-resolved-spectra/blob/master/figure/trace.jpg)
-  
-### H (hyperspectra)  
-  
-![image](https://github.com/j6309355065/Near-seperable-NMF-on-time-resolved-spectra/blob/master/figure/spectra.jpg)
-  
-## (2) The results of separable NMF and the comparison with the originals  
+![image](https://github.com/lwchen6309/successive-nonnegative-projection-algorithm./blob/master/image/trspec.png)
 
-### W and W_recontructed (kinetics)  
+## The result of SNPA
+from top to bottom: 
+(1) H (hyperspectra from SNPA).
+(2) spectra at different time slices.
+(3) W(kinetics) and comparison of real ideal(real)-trace. 
+
+![image](https://github.com/lwchen6309/successive-nonnegative-projection-algorithm./blob/master/image/NMF_result.png)
   
-![image](https://github.com/j6309355065/Near-seperable-NMF-on-time-resolved-spectra/blob/master/figure/nmf_trace.jpg)
-  
-### H and H_recontructed (hyperspectra)  
-  
-![image](https://github.com/j6309355065/Near-seperable-NMF-on-time-resolved-spectra/blob/master/figure/nmf_spectra.jpg)
