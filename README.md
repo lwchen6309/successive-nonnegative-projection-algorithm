@@ -1,4 +1,4 @@
-# Near-separable-NMF-on-time-resolved-spectra by Successive Nonnegative Projection Algorithm
+# Near separable NMF on time resolved spectra by Successive Nonnegative Projection Algorithm
 
 An python implementaion of  
 
@@ -49,14 +49,22 @@ Hence, the approximation of separable NMF highly depends on the overlapping betw
 
 An artificial time-resolved spectra is given M = W * H:  
 where  
+
+### W and H (time-resolved spectra)  
+![image](https://github.com/lwchen6309/successive-nonnegative-projection-algorithm./blob/master/image/trace_spectra.png)
+
 ### M (time-resolved spectra)  
 ![image](https://github.com/lwchen6309/successive-nonnegative-projection-algorithm./blob/master/image/trspec.png)
 
 ## The result of SNPA
 from top to bottom: 
+
 (1) H (hyperspectra from SNPA).
+
 (2) spectra at different time slices.
+
 (3) W(kinetics) and comparison of real ideal(real)-trace. 
+
 
 ![image](https://github.com/lwchen6309/successive-nonnegative-projection-algorithm./blob/master/image/NMF_result.png)
   
