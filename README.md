@@ -1,6 +1,13 @@
 # Near-separable-NMF-on-time-resolved-spectra
 
-An MATLAB implementaion of  
+An python implementaion of  
+
+**"Successive Nonnegative Projection Algorithm for Robust Nonnegative Blind Source Separation"  
+    by Gillis. (2014), doi : 10.1137/130946782  
+    code : https://sites.google.com/site/nicolasgillis/code  
+
+and
+
 **"Using Separable Nonnegative Matrix Factorization Techniques for the Analysis of Time-Resolved Raman Spectra"  
 by Luce et al. (2016), doi : 10.1177/0003702816662600**
 
