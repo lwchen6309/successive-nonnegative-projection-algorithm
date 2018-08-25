@@ -9,6 +9,7 @@ An python implementaion of
     by Luce et al. (2016), doi : 10.1177/0003702816662600**
 
 This code is revised from the matlab code provided by the author.
+
 (matlab code : https://sites.google.com/site/nicolasgillis/code)
 
 # Introduction
