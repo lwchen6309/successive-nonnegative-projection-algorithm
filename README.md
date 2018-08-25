@@ -2,13 +2,14 @@
 
 An python implementaion of  
 
-**"Successive Nonnegative Projection Algorithm for Robust Nonnegative Blind Source Separation"  
+    **"Successive Nonnegative Projection Algorithm for Robust Nonnegative Blind Source Separation"  
     by Gillis. (2014), doi : 10.1137/130946782  
-    matlab code : https://sites.google.com/site/nicolasgillis/code  
+    
+    **"Using Separable Nonnegative Matrix Factorization Techniques for the Analysis of Time-Resolved Raman Spectra"  
+    by Luce et al. (2016), doi : 10.1177/0003702816662600**
 
-**"Using Separable Nonnegative Matrix Factorization Techniques for the Analysis of Time-Resolved Raman Spectra"  
-by Luce et al. (2016), doi : 10.1177/0003702816662600**
-
+This code is revised from the matlab code provided by the author.
+(matlab code : https://sites.google.com/site/nicolasgillis/code)
 
 # Introduction
 ## (1) Time-resolved sepctrum
